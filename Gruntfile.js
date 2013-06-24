@@ -70,6 +70,17 @@ module.exports = function (grunt) {
             ];
           }
         }
+      },
+      'test-e2e': {
+        options: {
+          port: 9999,
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, '.tmp'),
+              mountFolder(connect, 'test')
+            ];
+          }
+        }
       }
     },
     open: {
@@ -281,7 +292,7 @@ module.exports = function (grunt) {
     'clean:server',
     'coffee',
     'compass',
-    'connect:test',
+    'connect:test-e2e',
     'karma:unit'
   ]);
 
