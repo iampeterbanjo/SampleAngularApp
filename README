@@ -1,0 +1,13 @@
+Sample Angular app based on yeoman angular app with configurations for running Karma test server in autowatch mode
+
+Run server
+`grunt server`
+
+Run tests
+`grunt test`
+
+Run end-to-end tests
+`grunt test-e2e`
+
+NB: The end-to-end tests are failing intentionally. Have fun!
+
